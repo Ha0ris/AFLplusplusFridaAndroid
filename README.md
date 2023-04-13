@@ -1,2 +1,1 @@
-# AFLplusplusFridaAndroid
-AFLplusplus Frida mode Android build
+# Build AFLplusplus Frida mode Android 12 (aarch64)
