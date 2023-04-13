@@ -38,11 +38,14 @@ target_include_directories(afl-fuzz AFTER PRIVATE ${CMAKE_SOURCE_DIR}/include)
 
 target_compile_definitions(
     afl-fuzz
-    PRIVATE DOC_PATH=\".\"
-    PRIVATE BIN_PATH=\".\"
+    PRIVATE DOC_PATH=\"/usr/local/share/doc/afl\"
+    PRIVATE BIN_PATH=\"/usr/local/bin\"
+    PRIVATE AFL_PATH=\"/usr/local/lib/afl\"
+    PRIVATE _FORTIFY_SOURCE=2
 )
 
 set_target_properties(afl-fuzz PROPERTIES POSITION_INDEPENDENT_CODE ON)
+set_target_properties(afl-fuzz PROPERTIES COMPILE_FLAGS "-O2")
 
 # ==========
 # frida_mode
